@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.projet.factures.controller.LoginController" style="-fx-background-color: #f4f6f8;">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    
+    <VBox alignment="CENTER" spacing="10" style="-fx-background-color: white; -fx-padding: 40; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0); -fx-max-width: 400;">
+        <Label text="Connexion" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+        
+        <VBox spacing="5" alignment="CENTER_LEFT">
+            <Label text="Nom d'utilisateur" style="-fx-text-fill: #7f8c8d;"/>
+            <TextField fx:id="usernameField" promptText="admin" />
+        </VBox>
+        
+        <VBox spacing="5" alignment="CENTER_LEFT">
+            <Label text="Mot de passe" style="-fx-text-fill: #7f8c8d;"/>
+            <PasswordField fx:id="passwordField" promptText="admin" />
+        </VBox>
+        
+        <Label fx:id="errorLabel" textFill="red" visible="false"/>
+
+        <Button text="Se connecter" onAction="#handleLogin" defaultButton="true" prefWidth="200" styleClass="accent">
+            <graphic>
+                <FontIcon iconLiteral="fas-sign-in-alt"/>
+            </graphic>
+        </Button>
+    </VBox>
+</VBox>

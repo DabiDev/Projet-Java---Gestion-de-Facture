@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" 
+            fx:controller="fr.projet.factures.controller.MainController"
+            prefHeight="700.0" prefWidth="1000.0">
+    
+    <left>
+        <VBox spacing="10" style="-fx-background-color: #f4f4f4; -fx-padding: 20; -fx-pref-width: 250;">
+            <Label text="Gestion Factures" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-padding: 0 0 20 0;"/>
+            
+            <Button text="Dashboard" onAction="#showDashboard" maxWidth="Infinity" alignment="TOP_LEFT" styleClass="accent">
+                <graphic><FontIcon iconLiteral="fas-chart-line" iconSize="20"/></graphic>
+            </Button>
+            
+            <Button text="Clients" onAction="#showClients" maxWidth="Infinity" alignment="TOP_LEFT">
+                <graphic><FontIcon iconLiteral="fas-users" iconSize="20"/></graphic>
+            </Button>
+
+            <Button text="Produits" onAction="#showProduits" maxWidth="Infinity" alignment="TOP_LEFT">
+                <graphic><FontIcon iconLiteral="fas-box" iconSize="20"/></graphic>
+            </Button>
+            
+            <Button text="Factures" onAction="#showFactures" maxWidth="Infinity" alignment="TOP_LEFT">
+                <graphic><FontIcon iconLiteral="fas-file-invoice" iconSize="20"/></graphic>
+            </Button>
+        </VBox>
+    </left>
+    
+    <center>
+        <StackPane fx:id="contentArea" style="-fx-padding: 20;">
+            <!-- Dynamic Content -->
+        </StackPane>
+    </center>
+    
+</BorderPane>

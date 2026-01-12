@@ -1,0 +1,60 @@
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 14px;
+}
+
+.sidebar {
+    -fx-background-color: #ffffff;
+    -fx-border-color: transparent #e0e0e0 transparent transparent;
+    -fx-padding: 20px;
+}
+
+.sidebar .button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #333333;
+    -fx-alignment: BASELINE_LEFT;
+    -fx-padding: 10 15;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+}
+
+.sidebar .button:hover {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #000000;
+}
+
+.sidebar .button .ikonli-font-icon {
+    -fx-fill: #666666;
+    -fx-icon-size: 18px;
+}
+
+.sidebar .button:hover .ikonli-font-icon {
+    -fx-fill: #000000;
+}
+
+/* Accent Button (Primary Action) */
+.accent {
+    -fx-background-color: -color-accent-fg;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.accent:hover {
+    -fx-background-color: derive(-color-accent-fg, -10%);
+}
+.accent .ikonli-font-icon {
+    -fx-fill: white;
+}
+
+/* Table View Styling Enhancements */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: transparent;
+}
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #e0e0e0;
+}
+.table-row-cell:hover {
+    -fx-background-color: #f5f9ff;
+}

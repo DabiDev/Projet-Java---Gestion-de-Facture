@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="fr.projet.factures.controller.DashboardController" spacing="20">
+    <padding><javafx.geometry.Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label text="Tableau de bord" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+    
+<?import javafx.scene.layout.GridPane?>
+
+    <GridPane hgap="20" vgap="20">
+        <!-- Card 1: Clients -->
+        <VBox GridPane.columnIndex="0" GridPane.rowIndex="0" prefWidth="200" style="-fx-background-color: white; -fx-padding: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0); -fx-background-radius: 5;">
+            <Label text="Total Clients" style="-fx-font-size: 14; -fx-text-fill: #7f8c8d;"/>
+            <Label fx:id="totalClientsLabel" text="0" style="-fx-font-size: 28; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+        </VBox>
+
+        <!-- Card 2: CA Payload -->
+        <VBox GridPane.columnIndex="1" GridPane.rowIndex="0" prefWidth="200" style="-fx-background-color: white; -fx-padding: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0); -fx-background-radius: 5;">
+             <Label text="Chiffre d'Affaires" style="-fx-font-size: 14; -fx-text-fill: #7f8c8d;"/>
+             <Label fx:id="chiffreAffairesLabel" text="0.00 €" style="-fx-font-size: 28; -fx-font-weight: bold; -fx-text-fill: #27ae60;"/>
+        </VBox>
+
+        <!-- Card 3: Pending Amount -->
+        <VBox GridPane.columnIndex="2" GridPane.rowIndex="0" prefWidth="200" style="-fx-background-color: white; -fx-padding: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0); -fx-background-radius: 5;">
+             <Label text="Montant en Attente" style="-fx-font-size: 14; -fx-text-fill: #7f8c8d;"/>
+             <Label fx:id="enAttenteLabel" text="0.00 €" style="-fx-font-size: 28; -fx-font-weight: bold; -fx-text-fill: #e67e22;"/>
+        </VBox>
+
+        <!-- Card 4: Pending Invoices Count -->
+        <VBox GridPane.columnIndex="3" GridPane.rowIndex="0" prefWidth="200" style="-fx-background-color: white; -fx-padding: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0); -fx-background-radius: 5;">
+             <Label text="Factures à Relancer" style="-fx-font-size: 14; -fx-text-fill: #7f8c8d;"/>
+             <Label fx:id="nbFacturesAttenteLabel" text="0" style="-fx-font-size: 28; -fx-font-weight: bold; -fx-text-fill: #c0392b;"/>
+        </VBox>
+    </GridPane>
+
+    <VBox style="-fx-padding: 20;">
+        <Label text="Bienvenue dans votre application de gestion." style="-fx-font-size: 16;"/>
+    </VBox>
+</VBox>
